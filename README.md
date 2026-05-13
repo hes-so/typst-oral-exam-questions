@@ -105,7 +105,7 @@ typst compile --input solution=true main.typ exam-solutions.pdf
 | Field   | Value                                     |
 |---------|-------------------------------------------|
 | Name    | `hesso-oral-exam`                         |
-| Version | `0.2.0`                                   |
+| Version | `0.2.1`                                   |
 | License | MIT                                       |
 | Author  | Jacques Supcik <jacques.supcik@hes-so.ch> |
 

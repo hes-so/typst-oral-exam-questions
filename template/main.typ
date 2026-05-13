@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: MIT
 
-#import "@local/hesso-oral-exam:0.2.0": exam, exam-solution
+#import "@local/hesso-oral-exam:0.2.1": exam, exam-solution
 
 #set page(margin: (x: 20mm, top: 15mm, bottom: 20mm))
 #set text(font: "Noto Sans")
