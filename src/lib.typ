@@ -1,7 +1,8 @@
 // SPDX-FileCopyrightText: 2026 Jacques Supcik <jacques.supci@hes-so.ch>
 //
 // SPDX-License-Identifier: MIT
-
+//
+// This file is part of the HES-SO exam template.
 //
 
 #let fillgrid(square_size: 4mm, color: aqua) = {
@@ -22,50 +23,6 @@
       r = r + 1
     }
   })
-}
-
-#let evaluation_page(
-  title: none,
-  date: none,
-  student: none,
-  class: none,
-  teacher: none,
-  expert: none,
-  duration: none,
-  preparation: none,
-  passage: none,
-  version: none,
-) = {
-  set table(
-    inset: (
-      x: 5pt,
-      y: 15pt,
-    ),
-  )
-  place(top + right, [
-    #set text(font: "Old Stamper", size: 20pt, fill: blue)
-    #rotate(-5deg, version)
-  ])
-  image(
-    width: 110mm,
-    "img/mse_logo.svg",
-  )
-  v(4mm)
-  [*#title*#h(1fr)*#date*]
-  table(
-    columns: (9em, 11em, 10em, 4em, 1fr),
-    table.cell(colspan: 3, [Nom de l'étudiant-e : *#student*]),
-    table.cell(colspan: 2, [Classe : *#class*]),
-    table.cell(colspan: 2, [Enseignant-e : *#teacher*]),
-    table.cell(colspan: 3, [Expert-e : *#expert*]),
-    [Durée : *#duration*], [Préparation : *#preparation*], [passage : *#passage*], [Note], [],
-  )
-  v(2mm)
-  block(
-    height: 1fr,
-    width: 100%,
-    fillgrid(),
-  )
 }
 
 #let exam-name = state("exam", [])
