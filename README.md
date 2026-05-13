@@ -112,3 +112,7 @@ typst compile --input solution=true main.typ exam-solutions.pdf
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Example Output
+
+![alt text](thumbnail.png)
