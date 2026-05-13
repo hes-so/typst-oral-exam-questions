@@ -1,0 +1,4 @@
+envelopes = [
+    { no = 1, questions = ["magic_01", "lab_01"] },
+    { no = 2, questions = ["magic_02", "lab_02"] },
+]

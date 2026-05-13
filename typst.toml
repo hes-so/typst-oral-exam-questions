@@ -1,0 +1,13 @@
+[package]
+name = "hesso-oral-exam"
+version = "0.2.0"
+entrypoint = "src/lib.typ"
+authors = ["Jacques Supcik <jacques.supcik@hefr.ch>"]
+license = "MIT"
+description = "Typst template for oral exams"
+categories = ["layout"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
