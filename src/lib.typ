@@ -53,7 +53,7 @@
         fill: red,
         size: 30pt,
         weight: "black",
-        [#sym.star#sym.star#sym.star Corrigé #sym.star#sym.star#sym.star],
+        [Corrigé],
       )))
     } else {
       box(stroke: black, inset: (x: 10pt, y: 25pt), width: 100%, radius: 2mm, [Nom de l'étudiant-e :])
