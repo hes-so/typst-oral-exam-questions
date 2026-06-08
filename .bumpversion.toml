@@ -35,6 +35,7 @@ replace = "hesso-oral-exam:{new_version}"
 glob = "template/questions/*.typ"
 search = "hesso-oral-exam:{current_version}"
 replace = "hesso-oral-exam:{new_version}"
+ignore_missing_version = true
 
 [[tool.bumpversion.files]]
 filename = "README.md"
