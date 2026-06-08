@@ -1,4 +1,4 @@
-#import "@local/hesso-oral-exam:0.1.0": question
+#import "inc.typ": question
 
 #question(
   title: [Potions magiques],

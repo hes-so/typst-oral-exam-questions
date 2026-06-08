@@ -11,7 +11,7 @@
 #set par(justify: true)
 
 #let data = toml("questions.toml")
-#exam-solution.update(false)
+#exam-solution.update(true)
 
 #if sys.inputs.at("solution", default: "none") == "true" {
   exam-solution.update(true)
