@@ -10,7 +10,7 @@
 // Keep question and solution content continuous and avoid duplex-oriented blanks.
 #show pagebreak.where(weak: true): none
 
-#let role = sys.inputs.at("role", default: "[enseignant]")
+#let role = sys.inputs.at("role", default: "enseignant")
 #let my_exam(
   student: none,
   preparation: none,
