@@ -1,0 +1,38 @@
+name: check-workflow
+
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check-formating-and-compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install cargo-binstall
+        uses: cargo-bins/cargo-binstall@main
+      - name: Check pre-commit hooks
+        uses: pre-commit/action@v2.0.0
+      - name: Install typstyle
+        run: cargo binstall typstyle
+      - name: Check typstyle formatting
+        run: typstyle check . --check --line-width 100
+      - name: Install typst
+        uses: typst-community/setup-typst@v5
+      - name: Install utpm
+        run: cargo binstall utpm
+
+      - name: Install the package
+        run: utpm pkg install .
+      - name: Install the required fonts
+        run: |
+          npm install -g google-font-cli
+          gfcli download "Noto Sans" -d ./fonts
+      - name: Compile the template
+        run: |
+          typst compile template/main.typ
+          typst compile template/prof_sheets.typ
