@@ -101,3 +101,62 @@
     }
   }
 }
+
+#let prof_evaluation_page(
+  title: none,
+  logo: image(
+    width: 110mm,
+    "img/mse_logo.svg",
+  ),
+  date: none,
+  student: none,
+  class: none,
+  teacher: none,
+  expert: none,
+  duration: none,
+  preparation: none,
+  passage: none,
+  version: none,
+  question1: none,
+  question2: none,
+) = {
+  set table(
+    inset: (
+      x: 5pt,
+      y: 15pt,
+    ),
+  )
+  place(top + right, [
+    // Prefer widely available cursive/script-like fonts for the stamp.
+    #set text(font: ("Noto Sans", "DejaVu Sans", "Liberation Sans"), size: 20pt, fill: blue)
+    #rotate(-5deg, version)
+  ])
+  logo
+  v(4mm)
+  [*#title*#h(1fr)*#date*]
+  table(
+    columns: (9em, 11em, 10em, 4em, 1fr),
+    table.cell(colspan: 3, [Nom de l'étudiant-e : *#student*]),
+    table.cell(colspan: 2, [Classe : *#class*]),
+//    ---
+    table.cell(colspan: 2, [Enseignant-e : *#teacher*]),
+    table.cell(colspan: 3, [Expert-e : *#expert*]),
+//    ---
+    table.cell(colspan: 1, [Durée : *#duration*]), 
+    table.cell(colspan: 1, [Préparation : *#preparation*]), 
+    table.cell(colspan: 1, [Passage : *#passage*]),
+    table.cell(colspan: 2, [Note finale : ]),
+//    ---
+    table.cell(colspan: 3, [Question 1: *#question1*]),
+    table.cell(colspan: 2, [Note Question 1:]),
+    table.cell(colspan: 3, [Question 2: *#question2*]),
+    table.cell(colspan: 2, [Note Question 2:]),
+  )
+  v(2mm)
+  block(
+    height: 1fr,
+    width: 100%,
+    fillgrid(),
+  )
+}
+
