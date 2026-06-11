@@ -20,7 +20,7 @@ jobs:
       - name: Install typstyle
         run: cargo binstall typstyle
       - name: Check typstyle formatting
-        run: typstyle check . --check --line-width 100
+        run: typstyle . --check --line-width 100
       - name: Install typst
         uses: typst-community/setup-typst@v5
       - name: Install utpm
