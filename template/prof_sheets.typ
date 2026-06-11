@@ -49,7 +49,8 @@
 #context exam-logo.update(image(width: 110mm, "img/mse_logo.svg"))
 
 #let envelope_questions(envelope_no) = {
-  questions.at("envelopes").at(calc.rem-euclid(envelope_no - 1, 18)).at("questions")
+  let envelopes = questions.envelopes
+  envelopes.at(calc.rem-euclid(envelope_no - 1, envelopes.len())).questions
 }
 
 #for (idx, s) in students.enumerate() {
