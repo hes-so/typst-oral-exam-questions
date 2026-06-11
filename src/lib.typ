@@ -49,14 +49,23 @@
   context {
     let sol = exam-solution.get()
     if sol {
-      box(stroke: black, inset: (x: 10pt, y: 15pt), width: 100%, radius: 2mm, align(center + horizon, text(
-        fill: red,
-        size: 30pt,
-        weight: "black",
-        [Corrigé],
-      )))
+      box(stroke: black, inset: (x: 10pt, y: 15pt), width: 100%, radius: 2mm, align(
+        center + horizon,
+        text(
+          fill: red,
+          size: 30pt,
+          weight: "black",
+          [Corrigé],
+        ),
+      ))
     } else {
-      box(stroke: black, inset: (x: 10pt, y: 25pt), width: 100%, radius: 2mm, [Nom de l'étudiant-e :])
+      box(
+        stroke: black,
+        inset: (x: 10pt, y: 25pt),
+        width: 100%,
+        radius: 2mm,
+        [Nom de l'étudiant-e :],
+      )
     }
   }
   v(2mm)
@@ -69,9 +78,16 @@
     {
       let sol = exam-solution.get()
       if sol {
-        block(inset: 10mm, stroke: .7mm + green, fill: green.lighten(90%), radius: 2mm, width: 100%, [
-          #solution
-        ])
+        block(
+          inset: 10mm,
+          stroke: .7mm + green,
+          fill: green.lighten(90%),
+          radius: 2mm,
+          width: 100%,
+          [
+            #solution
+          ],
+        )
         pagebreak(weak: true)
       } else {
         block(height: 1fr, width: 100%, fillgrid())
@@ -138,15 +154,15 @@
     columns: (9em, 11em, 10em, 4em, 1fr),
     table.cell(colspan: 3, [Nom de l'étudiant-e : *#student*]),
     table.cell(colspan: 2, [Classe : *#class*]),
-//    ---
+    //    ---
     table.cell(colspan: 2, [Enseignant-e : *#teacher*]),
     table.cell(colspan: 3, [Expert-e : *#expert*]),
-//    ---
-    table.cell(colspan: 1, [Durée : *#duration*]), 
-    table.cell(colspan: 1, [Préparation : *#preparation*]), 
+    //    ---
+    table.cell(colspan: 1, [Durée : *#duration*]),
+    table.cell(colspan: 1, [Préparation : *#preparation*]),
     table.cell(colspan: 1, [Passage : *#passage*]),
     table.cell(colspan: 2, [Note finale : ]),
-//    ---
+    //    ---
     table.cell(colspan: 3, [Question 1: *#question1*]),
     table.cell(colspan: 2, [Note Question 1:]),
     table.cell(colspan: 3, [Question 2: *#question2*]),
