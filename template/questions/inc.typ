@@ -1,1 +1,1 @@
-#import "@local/hesso-oral-exam:0.2.3": question
+#import "@local/hesso-oral-exam:0.2.4": question
