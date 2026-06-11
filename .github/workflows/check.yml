@@ -16,7 +16,7 @@ jobs:
       - name: Install cargo-binstall
         uses: cargo-bins/cargo-binstall@main
       - name: Check pre-commit hooks
-        uses: pre-commit/action@v2.0.0
+        uses: pre-commit/action@v3.0.1
       - name: Install typstyle
         run: cargo binstall typstyle
       - name: Check typstyle formatting
