@@ -1,6 +1,4 @@
-// SPDX-FileCopyrightText: 2026 Serge Ayerk <serge.ayer@hes-so.ch>
-//
-// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: 2026 Serge Ayer <serge.ayer@hes-so.ch>
 // SPDX-FileCopyrightText: 2026 Jacques Supcik <jacques.supci@hes-so.ch>
 //
 // SPDX-License-Identifier: MIT
