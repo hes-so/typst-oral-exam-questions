@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2026 Jacques Supcik <jacques.supci@hes-so.ch>
+// SPDX-FileCopyrightText: 2026 Jacques Supcik <jacques.supcik@hes-so.ch>
 //
 // SPDX-License-Identifier: MIT
 //

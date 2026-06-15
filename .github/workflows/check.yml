@@ -9,12 +9,12 @@ permissions:
   contents: read
 
 jobs:
-  check-formating-and-compile:
+  check-formatting-and-compile:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - name: Install cargo-binstall
-        uses: cargo-bins/cargo-binstall@main
+        uses: cargo-bins/cargo-binstall@v1.20.0
       - name: Check pre-commit hooks
         uses: pre-commit/action@v3.0.1
       - name: Install typstyle
@@ -24,7 +24,7 @@ jobs:
       - name: Install typst
         uses: typst-community/setup-typst@v5
       - name: Install utpm
-        run: cargo binstall utpm
+        run: cargo binstall -y utpm
 
       - name: Install the package
         run: utpm pkg install .
