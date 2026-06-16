@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2026 Serge Ayer <serge.ayer@hes-so.ch>
-// SPDX-FileCopyrightText: 2026 Jacques Supcik <jacques.supci@hes-so.ch>
+// SPDX-FileCopyrightText: 2026 Jacques Supcik <jacques.supcik@hes-so.ch>
 //
 // SPDX-License-Identifier: MIT
 
@@ -69,10 +69,10 @@
   pagebreak()
   qno.update(envelope_no)
   qno.step(level: 2)
-  include("questions/" + question1_id + ".typ")
+  include ("questions/" + question1_id + ".typ")
   pagebreak()
   qno.step(level: 2)
-  include("questions/" + question2_id + ".typ")
+  include ("questions/" + question2_id + ".typ")
   if idx < students.len() - 1 {
     pagebreak()
   }

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Jacques Supcik <jacques.supcik@hes-so.ch>
+//
+// SPDX-License-Identifier: MIT
+
 #import "inc.typ": question
 
 
@@ -15,5 +19,3 @@
     #lorem(600)
   ],
 )
-
-

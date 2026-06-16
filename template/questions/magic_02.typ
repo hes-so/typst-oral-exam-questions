@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Jacques Supcik <jacques.supcik@hes-so.ch>
+//
+// SPDX-License-Identifier: MIT
+
 #import "inc.typ": question
 
 #question(
@@ -12,5 +16,3 @@
     Les grimoires sont des livres de magie qui contiennent des sorts, des rituels, des recettes de potions et des informations sur les créatures magiques. Ils sont essentiels pour les sorciers et sorcières car ils servent de référence et de guide dans l'apprentissage et la pratique de la magie. Parmi les grimoires les plus célèbres, on trouve le "Livre des Ombres" utilisé par les sorcières, et le "Necronomicon", qui est réputé pour contenir des connaissances interdites. Les sorciers et sorcières consultent régulièrement leurs grimoires pour perfectionner leurs compétences, découvrir de nouveaux sorts et comprendre les propriétés magiques des ingrédients.
   ],
 )
-
-
