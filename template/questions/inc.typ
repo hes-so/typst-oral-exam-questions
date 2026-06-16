@@ -1,1 +1,5 @@
+// SPDX-FileCopyrightText: 2026 Jacques Supcik <jacques.supcik@hes-so.ch>
+//
+// SPDX-License-Identifier: MIT
+
 #import "@local/hesso-oral-exam:0.2.5": question
