@@ -127,7 +127,7 @@ The `prof_sheets.typ` file connects everything via the `my_exam` function.
 Simply define the properties corresponding to your specific exam, such as `title` or `date`.
 
 ```typst
-#import "@local/hesso-oral-exam:0.2.4": prof_evaluation_page
+#import "@local/hesso-oral-exam:0.2.5": prof_evaluation_page
 ...
 #let my_exam(
   student: none,
