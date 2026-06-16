@@ -100,7 +100,7 @@ typst compile --input solution=true main.typ exam-solutions.pdf
 `main.typ` wires everything together via the `exam` function:
 
 ```typst
-#import "@local/hesso-oral-exam:0.2.4": exam, exam-solution
+#import "@local/hesso-oral-exam:0.2.5": exam, exam-solution
 
 #let data = toml("questions.toml")
 
