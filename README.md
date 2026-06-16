@@ -139,7 +139,7 @@ Simply define the properties corresponding to your specific exam, such as `title
   prof_evaluation_page(
     title: [MA_Embreal / 2025-26],
     date: [Examen oral du 23 juin 2026],
-    version: role,
+    version: sys.inputs.at("role", default: "enseignant"),
     student: student,
     class: [MA_EmbReal],
     teacher: [Serge Ayer/Luca Haab],
