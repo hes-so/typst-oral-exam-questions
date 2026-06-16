@@ -3,7 +3,7 @@
 //
 // SPDX-License-Identifier: MIT
 
-#import "@local/hesso-oral-exam:0.2.4": prof_evaluation_page
+#import "@local/hesso-oral-exam:0.2.5": prof_evaluation_page
 #set page(margin: (x: 20mm, top: 15mm, bottom: 20mm))
 #set text(font: "Noto Sans")
 
@@ -54,7 +54,7 @@
 }
 
 #for (idx, s) in students.enumerate() {
-  let envelope_no = int(s.enveloppe)
+  let envelope_no = int(s.envelope)
   let envelope = envelope_questions(envelope_no)
   let question1_id = envelope.at(0).trim()
   let question2_id = envelope.at(1).trim()
