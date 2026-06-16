@@ -123,7 +123,7 @@ typst compile prof_sheets.typ
 ```
 
 ### `prof_sheets` entry point
-The `prof_sheets.typ` file connects everything via the `my_exam` function. 
+The `prof_sheets.typ` file connects everything via the `my_exam` function.
 Simply define the properties corresponding to your specific exam, such as `title` or `date`.
 
 ```typst
