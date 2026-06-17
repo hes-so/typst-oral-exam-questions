@@ -47,7 +47,7 @@ questions/        # one .typ file per question
 Each question lives in its own file under `questions/`. Use the `question` function:
 
 ```typst
-#import "@local/hesso-oral-exam:0.2.0": question
+#import "@local/hesso-oral-exam:0.2.5": question
 
 #question(
   title: [Question title],
