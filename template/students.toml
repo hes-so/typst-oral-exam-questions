@@ -1,4 +1,4 @@
 students = [
-  { name = "Jean Bolomey", arrival_time = "8:00", exam_time = "8:15", enveloppe = 1 },
-  { name = "Joe Dalton", arrival_time = "8:15", exam_time = "8:30", enveloppe = 2 },
+  { name = "Jean Bolomey", arrival_time = "8:00", exam_time = "8:15", envelope = 1 },
+  { name = "Joe Dalton", arrival_time = "8:15", exam_time = "8:30", envelope = 2 },
 ]
