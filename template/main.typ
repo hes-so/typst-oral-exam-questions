@@ -30,9 +30,13 @@
 
 #let ordered-envelopes = if students.len() > 0 {
   students.map(s => {
-    let e = data.envelopes.find(e => e.no == s.envelope)
+    let envelope-no = int(s.envelope)
+    let e = data.envelopes.find(e => e.no == envelope-no)
+    if e == none {
+      panic("students.toml references envelope " + str(envelope-no) + " which is not present in questions.toml")
+    }
     (
-      no: e.no,
+      no: envelope-no,
       student: s.name,
       questions: e.questions.map(q => include "questions/" + str(q) + ".typ"),
     )
