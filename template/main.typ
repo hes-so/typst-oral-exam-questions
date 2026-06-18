@@ -22,9 +22,10 @@
 #let show-student-name = sys.inputs.at("show-student-name", default: "false") == "true"
 
 // Load students.toml. If the `students` array is non-empty, envelopes are
-// printed in student order and each student's name appears in the header.
+// printed in student order. Pass `--input show-student-name=true` to also
+// render each student's name in the header.
 // Set `students = []` (or keep the array empty) to use the default order
-// from questions.toml without student names.
+// from questions.toml.
 #let students = toml("students.toml").at("students", default: ())
 
 #let ordered-envelopes = if students.len() > 0 {
