@@ -2,4 +2,4 @@
 //
 // SPDX-License-Identifier: MIT
 
-#import "@local/hesso-oral-exam:0.2.5": question
+#import "@local/hesso-oral-exam:0.2.6": question

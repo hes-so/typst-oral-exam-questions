@@ -47,7 +47,7 @@ questions/        # one .typ file per question
 Each question lives in its own file under `questions/`. Use the `question` function:
 
 ```typst
-#import "@local/hesso-oral-exam:0.2.5": question
+#import "@local/hesso-oral-exam:0.2.6": question
 
 #question(
   title: [Question title],
@@ -100,7 +100,7 @@ typst compile --input solution=true main.typ exam-solutions.pdf
 `main.typ` wires everything together via the `exam` function:
 
 ```typst
-#import "@local/hesso-oral-exam:0.2.5": exam, exam-solution
+#import "@local/hesso-oral-exam:0.2.6": exam, exam-solution
 
 #let data = toml("questions.toml")
 
@@ -127,7 +127,7 @@ The `prof_sheets.typ` file connects everything via the `my_exam` function.
 Simply define the properties corresponding to your specific exam, such as `title` or `date`.
 
 ```typst
-#import "@local/hesso-oral-exam:0.2.5": prof_evaluation_page
+#import "@local/hesso-oral-exam:0.2.6": prof_evaluation_page
 ...
 #let my_exam(
   student: none,
@@ -159,7 +159,7 @@ Simply define the properties corresponding to your specific exam, such as `title
 | Field   | Value                                     |
 |---------|-------------------------------------------|
 | Name    | `hesso-oral-exam`                         |
-| Version | `0.2.5`                                   |
+| Version | `0.2.6`                                   |
 | License | MIT                                       |
 | Author  | Jacques Supcik <jacques.supcik@hes-so.ch> |
 
