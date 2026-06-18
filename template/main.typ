@@ -33,7 +33,11 @@
     let envelope-no = int(s.envelope)
     let e = data.envelopes.find(e => e.no == envelope-no)
     if e == none {
-      panic("students.toml references envelope " + str(envelope-no) + " which is not present in questions.toml")
+      panic(
+        "students.toml references envelope "
+          + str(envelope-no)
+          + " which is not present in questions.toml",
+      )
     }
     (
       no: envelope-no,
