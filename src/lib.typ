@@ -29,6 +29,8 @@
 #let exam-date = state("exam-date", [])
 #let exam-logo = state("exam-logo", none)
 #let exam-solution = state("exam-solution", false)
+#let exam-student = state("exam-student", none)
+#let exam-show-student-name = state("exam-show-student-name", false)
 
 #let qno = counter("question")
 
@@ -44,10 +46,20 @@
   ))
   context [#exam-logo.get()]
   v(4mm)
-  context [*#exam-name.get()*#h(1fr)*#exam-date.get()*]
+  context {
+    let student = exam-student.get()
+    let show-student = exam-show-student-name.get()
+    if show-student and student != none {
+      [*#exam-name.get()*#h(1fr)*#student*#h(1fr)*#exam-date.get()*]
+    } else {
+      [*#exam-name.get()*#h(1fr)*#exam-date.get()*]
+    }
+  }
   parbreak()
   context {
     let sol = exam-solution.get()
+    let student = exam-student.get()
+    let show-student = exam-show-student-name.get()
     if sol {
       box(stroke: black, inset: (x: 10pt, y: 15pt), width: 100%, radius: 2mm, align(
         center + horizon,
@@ -64,7 +76,11 @@
         inset: (x: 10pt, y: 25pt),
         width: 100%,
         radius: 2mm,
-        [Nom de l'étudiant-e :],
+        if show-student and student != none {
+          [Nom de l'étudiant-e : *#student*]
+        } else {
+          [Nom de l'étudiant-e :]
+        },
       )
     }
   }
@@ -105,11 +121,14 @@
   date: none,
   envelopes: (),
   logo: none,
+  show-student-name: false,
 ) = {
   exam-name.update(name)
   exam-date.update(date)
   exam-logo.update(logo)
+  exam-show-student-name.update(show-student-name)
   for e in envelopes {
+    exam-student.update(e.at("student", default: none))
     qno.update(e.no)
     for q in e.questions {
       qno.step(level: 2)
