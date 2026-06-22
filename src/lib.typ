@@ -111,6 +111,7 @@
         pagebreak()
         block(height: 1fr, width: 100%, fillgrid())
       }
+      // When enabled, insert a weak break to the next odd page so each question starts on a recto page (duplex printing).
       let break-even = exam-break-even.get()
       if break-even {
         pagebreak(weak: true, to: "odd")
