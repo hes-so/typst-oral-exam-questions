@@ -31,6 +31,7 @@
 #let exam-solution = state("exam-solution", false)
 #let exam-student = state("exam-student", none)
 #let exam-show-student-name = state("exam-show-student-name", false)
+#let exam-break-even = state("exam-break-even", true)
 
 #let qno = counter("question")
 
@@ -110,7 +111,11 @@
         pagebreak()
         block(height: 1fr, width: 100%, fillgrid())
       }
-      pagebreak(weak: true, to: "odd")
+      // When enabled, insert a weak break to the next odd page so each question starts on a recto page (duplex printing).
+      let break-even = exam-break-even.get()
+      if break-even {
+        pagebreak(weak: true, to: "odd")
+      }
     }
   )
 }

@@ -159,7 +159,7 @@ Simply define the properties corresponding to your specific exam, such as `title
 | Field   | Value                                     |
 |---------|-------------------------------------------|
 | Name    | `hesso-oral-exam`                         |
-| Version | `0.2.6`                                   |
+| Version | `0.2.7`                                   |
 | License | MIT                                       |
 | Author  | Jacques Supcik <jacques.supcik@hes-so.ch> |
 

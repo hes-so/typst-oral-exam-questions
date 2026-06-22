@@ -3,7 +3,7 @@
 //
 // SPDX-License-Identifier: MIT
 
-#import "@local/hesso-oral-exam:0.2.6": prof_evaluation_page
+#import "@local/hesso-oral-exam:0.2.7": prof_evaluation_page
 #set page(margin: (x: 20mm, top: 15mm, bottom: 20mm))
 #set text(font: "Noto Sans")
 
@@ -41,12 +41,15 @@
 #let exam-name = state("exam", [])
 #let exam-date = state("exam-date", [])
 #let exam-logo = state("exam-logo", none)
+#let exam-break-even = state("exam-break-even", true)
 
 // Enable solution rendering in included question sheets.
 #context exam-solution.update(true)
 #context exam-name.update([HES-SO Cours MA_EmbReal / 2025-26])
 #context exam-date.update([Examen oral du 23 juin 2026])
 #context exam-logo.update(image(width: 110mm, "img/mse_logo.svg"))
+// Disable break-even page breaks in included question sheets.
+#context exam-break-even.update(false)
 
 #let envelope_questions(envelope_no) = {
   let envelopes = questions.envelopes
