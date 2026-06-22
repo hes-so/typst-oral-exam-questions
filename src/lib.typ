@@ -114,7 +114,7 @@
       let break-even = exam-break-even.get()
       if break-even {
         pagebreak(weak: true, to: "odd")
-      }      
+      }
     }
   )
 }
