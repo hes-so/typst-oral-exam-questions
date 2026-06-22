@@ -41,12 +41,14 @@
 #let exam-name = state("exam", [])
 #let exam-date = state("exam-date", [])
 #let exam-logo = state("exam-logo", none)
+#let exam-break-even = state("exam-break-even", true)
 
 // Enable solution rendering in included question sheets.
 #context exam-solution.update(true)
 #context exam-name.update([HES-SO Cours MA_EmbReal / 2025-26])
 #context exam-date.update([Examen oral du 23 juin 2026])
 #context exam-logo.update(image(width: 110mm, "img/mse_logo.svg"))
+// Disable break-even page breaks in included question sheets.
 #context exam-break-even.update(false)
 
 #let envelope_questions(envelope_no) = {
