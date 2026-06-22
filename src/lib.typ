@@ -31,6 +31,7 @@
 #let exam-solution = state("exam-solution", false)
 #let exam-student = state("exam-student", none)
 #let exam-show-student-name = state("exam-show-student-name", false)
+#let exam-break-even = state("exam-break-even", true)
 
 #let qno = counter("question")
 
@@ -110,7 +111,10 @@
         pagebreak()
         block(height: 1fr, width: 100%, fillgrid())
       }
-      pagebreak(weak: true, to: "odd")
+      let break-even = exam-break-even.get()
+      if break-even {
+        pagebreak(weak: true, to: "odd")
+      }      
     }
   )
 }
